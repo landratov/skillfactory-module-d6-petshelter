@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block extra_head %}
+<title>Питомцы — {{ object.name }}</title>
+{% endblock %}
+{% block content %}
+<div class="pet-detail container">
+    <div class="col-lg-4">
+        <img height="350" width="350" src="{{ object.photo.url }}" alt="" class="fit">
+    </div>
+    <div class="col-lg-8">
+        <strong>Кличка:</strong> {{ object.name }}<br>
+        <strong>Возраст:</strong> {{ object.age }}<br>
+        <strong>Порода:</strong> {{ object.breed }}<br>
+        <strong>Описание:</strong> {{ object.description }}
+    </div>
+</div>
+{% endblock %}
